@@ -2,7 +2,7 @@ import "./style.sass";
 
 const SectionTitle = ({ children, alignLeft, bgText }) => {
   return (
-    <div className={`section-title text-light ${alignLeft ? "text-start" : "text-center"}`} data-bg-text={bgText}>
+    <div className={`section-title mb-5 text-light ${alignLeft ? "text-start" : "text-center"}`} data-bg-text={bgText}>
       {children}
     </div>
   );

@@ -11,7 +11,7 @@ const Info = ({ variants }) => {
   ];
 
   return (
-    <div className="info my-5 ps-2">
+    <div className="info mb-5 ps-2">
       {info.map((element) => (
         <motion.div className="row mb-3" variants={variants} key={element.name}>
           <span className="col-3 text-white fw-600">{element.name}:</span>

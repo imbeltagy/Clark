@@ -10,7 +10,6 @@ html
   min-height: 100%
   font-family: 'Poppins', Arial, sans-serif
   background: $c-dark
-  height: 3000px
 
 .container
   @include xl-screens
@@ -18,3 +17,5 @@ html
 
 section:not(.hero)
   padding-top: 7rem
+section:not(.hero):not(.about)
+  padding-bottom: 7rem

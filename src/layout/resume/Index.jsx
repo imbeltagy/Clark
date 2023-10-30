@@ -60,7 +60,7 @@ const Resume = () => {
         </SectionTitle>
 
         {/* Content */}
-        <div className="cards row row-cols-md-2 g-4 mt-5">
+        <div className="cards row row-cols-md-2 g-4">
           {cardsContent.map((element) => (
             <motion.div
               initial={{ y: 100, opacity: 0 }}
@@ -83,7 +83,7 @@ const Resume = () => {
         </div>
 
         {/* Button */}
-        <div className="my-5 py-5">
+        <div className="mt-5 pt-5">
           <LinkBtn className="mx-auto fw-600 py-4 px-5">Download CV</LinkBtn>
         </div>
       </div>
