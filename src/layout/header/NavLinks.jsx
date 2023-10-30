@@ -16,7 +16,7 @@ const NavLinks = () => {
   // Scroll To Link Target
   const scroll2Target = (link) => {
     const targetElement = document.querySelector(link.getAttribute("data-target"));
-    targetElement && scrollTo(0, targetElement.offsetTop - 100);
+    targetElement && scrollTo(0, targetElement.offsetTop);
   };
 
   const linksRef = useRef([]);
