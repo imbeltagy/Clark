@@ -1,16 +1,18 @@
 @import /src/assets/sass/variables
 
 .navbar
-  background-color: $c-dark
   width: 100%
   z-index: 1000
   &.sleep
+    background-color: $c-dark
     transform: translateY(-100%)
   &.fixed
     transition: transform .3s
     position: fixed
   &.awake
     transform: translateY(0%)
+  @include lg-screens
+    position: absolute
 
 .navbar-brand
   font-size: 1.5rem
