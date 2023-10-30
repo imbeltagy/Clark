@@ -32,7 +32,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="hero">
+    <section id="home" className="hero">
       <Carousel fade interval={3000} controls={null} activeIndex={index} onSelect={handleSelect}>
         {slides.map((slide, i) => (
           <Carousel.Item key={slide.img}>
