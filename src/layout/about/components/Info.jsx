@@ -13,7 +13,7 @@ const Info = ({ variants }) => {
   return (
     <div className="info my-5 ps-2">
       {info.map((element) => (
-        <motion.div className="row mb-3" initial="hidden" whileInView="visible" variants={variants} key={element.name}>
+        <motion.div className="row mb-3" variants={variants} key={element.name}>
           <span className="col-3 text-white fw-600">{element.name}:</span>
           <span className="col-9 text-secondary">{element.content}</span>
         </motion.div>

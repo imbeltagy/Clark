@@ -24,14 +24,14 @@ const About = () => {
           </div>
 
           {/* Text */}
-          <motion.div className="text col-md-6 col-lg-7" variants={variants}>
+          <motion.div className="text col-md-6 col-lg-7 pb-md-3" variants={variants}>
             <Title />
 
             <Info variants={variants} />
 
             <ProjectsCount variants={variants} />
 
-            <motion.div initial="hidden" whileInView="visible" variants={variants}>
+            <motion.div className="pb-md-5" variants={variants}>
               <LinkBtn className="fw-600">Download CV</LinkBtn>
             </motion.div>
           </motion.div>

@@ -12,20 +12,14 @@ const ProjectsCount = ({ variants }) => {
   }, [projectsCount]);
 
   return (
-    <motion.p
-      className="fw-600 mb-4"
-      style={{ fontSize: "1.3rem", letterSpacing: ".07em" }}
-      initial="hidden"
-      whileInView="visible"
-      variants={variants}
-    >
+    <p className="fw-600 mb-4" style={{ fontSize: "1.3rem", letterSpacing: ".07em" }}>
       <motion.span className="text-primary me-2" variants={variants}>
         {projectsCount}
       </motion.span>
       <motion.span className="text-light" variants={variants}>
         Projects complete
       </motion.span>
-    </motion.p>
+    </p>
   );
 };
 
