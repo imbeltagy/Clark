@@ -1,49 +1,44 @@
 import "./style.sass";
-import "./fixedNavbar";
-import "./activeLinks";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useEffect, useRef } from "react";
+import NavLinks from "./NavLinks";
 
 const Header = () => {
-  const links = [
-    { text: "Home", target: "#home" },
-    { text: "About", target: "#about" },
-    { text: "Resume", target: "#resume" },
-    { text: "Services", target: "#services" },
-    { text: "Skills", target: "#skills" },
-    { text: "Projects", target: "#projects" },
-    { text: "My Blog", target: "#blog" },
-    { text: "Contact", target: "#contact" },
-  ];
+  const header = useRef();
 
-  // Scroll To Link Target
-  const scroll2Target = (link) => {
-    const targetElement = document.querySelector(link.getAttribute("data-target"));
-    targetElement && scrollTo(0, targetElement.offsetTop);
-  };
+  // Change Header To Fixed On Scroll
+  useEffect(() => {
+    const fixedNavbar = () => {
+      if (scrollY >= 300) {
+        // Added all Classes in case its onload and there is no classes
+        header.current.classList.add("awake");
+        header.current.classList.add("fixed");
+        header.current.classList.add("sleep");
+      } else if (scrollY >= 200) {
+        header.current.classList.add("fixed");
+        header.current.classList.add("sleep");
+        header.current.classList.remove("awake");
+      } else if (scrollY >= 100) {
+        header.current.classList.add("sleep");
+        header.current.classList.remove("fixed");
+      } else {
+        header.current.classList.remove("sleep");
+      }
+    };
+
+    window.addEventListener("scroll", fixedNavbar);
+    window.addEventListener("load", fixedNavbar);
+  }, [header]);
 
   return (
-    <Navbar expand="lg">
+    <Navbar ref={header} expand="lg">
       <div className="container py-2">
         <Navbar.Brand href="#home" className="text-light fw-900">
           CLARK
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navigation" />
         <Navbar.Collapse id="navigation">
-          <Nav className="ms-auto gap-1 gap-lg-0">
-            {links.map((element) => (
-              <Nav.Link
-                className="px-lg-3 text-light"
-                onClick={(e) => {
-                  !e.target.classList.contains("active") && scroll2Target(e.target);
-                }}
-                data-target={element.target}
-                key={element.text}
-              >
-                <span>{element.text}</span>
-              </Nav.Link>
-            ))}
-          </Nav>
+          <NavLinks />
         </Navbar.Collapse>
       </div>
     </Navbar>
