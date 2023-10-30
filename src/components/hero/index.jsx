@@ -2,6 +2,7 @@ import "./style.sass";
 import Carousel from "react-bootstrap/Carousel";
 import LinkBtn from "../../common/linkBtn";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Hero = () => {
   const slides = [
@@ -9,7 +10,7 @@ const Hero = () => {
       img: "/src/assets/images/hero/bg_1.png",
       headding: (
         <>
-          I'm <span className="special">Clark Thompson</span>
+          I'm <span className="text-primary">Clark Thompson</span>
         </>
       ),
       subHeadding: "A Freelance Web Designer",
@@ -18,28 +19,37 @@ const Hero = () => {
       img: "/src/assets/images/hero/bg_2.png",
       headding: (
         <>
-          I'm a <span className="special">web designer</span> based in London
+          I'm a <span className="text-primary">web designer</span> based in London
         </>
       ),
     },
   ];
 
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
+
   return (
     <section id="hero" className="hero">
-      <Carousel fade interval={3000} controls={null}>
-        {slides.map((slide) => (
+      <Carousel fade interval={3000} controls={null} activeIndex={index} onSelect={handleSelect}>
+        {slides.map((slide, i) => (
           <Carousel.Item key={slide.img}>
             <div className="container">
+              {/* Image */}
               <div className="img" style={{ backgroundImage: `url(${slide.img})` }}></div>
               <div className="overlay"></div>
+
+              {/* Caption */}
               <Carousel.Caption>
                 <motion.div
                   initial={{ y: 100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1, transition: { duration: 0.7 } }}
+                  animate={{ y: 0, opacity: i === index ? 1 : 0, transition: { duration: 0.7 } }}
                   className="container"
                 >
-                  <span className="small">HELLO!</span>
-                  <h1 className="my-2 mb-3">{slide.headding}</h1>
+                  <span className="small text-primary">HELLO!</span>
+                  <h1 className="my-2 mb-3 fw-800">{slide.headding}</h1>
                   {slide.subHeadding && <h2 className="mb-4">{slide.subHeadding}</h2>}
                   <div className="btns">
                     <LinkBtn className="me-1">hire me</LinkBtn>

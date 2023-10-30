@@ -16,14 +16,16 @@ const Header = () => {
   ];
 
   return (
-    <Navbar expand="lg" data-bs-theme="dark">
+    <Navbar expand="lg">
       <div className="container py-2">
-        <Navbar.Brand href="#home">CLARK</Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-light fw-900">
+          CLARK
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navigation" />
         <Navbar.Collapse id="navigation">
           <Nav className="ms-auto gap-1 gap-lg-0">
             {links.map((element) => (
-              <Nav.Link className="px-lg-3" href={element.href} key={element.text}>
+              <Nav.Link className="px-lg-3 text-light" href={element.href} key={element.text}>
                 <span>{element.text}</span>
               </Nav.Link>
             ))}

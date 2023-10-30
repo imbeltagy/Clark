@@ -1,0 +1,28 @@
+@import /src/assets/sass/variables
+
+.section-title
+  position: relative
+
+  h2
+    font-size: 3rem
+    line-height: 1
+    margin-bottom: 1.5rem
+    @include xl-screens
+      margin-bottom: 2rem
+
+  &::before
+    content: attr(data-bg-text)
+    font-size: 3.3rem
+    font-weight: 800
+    line-height: 1
+    opacity: .15
+    position: absolute
+    inset: 0 -1rem auto
+
+    // @include md-screens
+    //   font-size: 3.5rem
+    @include lg-screens
+      font-size: 4.5rem
+    @include xl-screens
+      font-size: 6rem
+      top: 1rem

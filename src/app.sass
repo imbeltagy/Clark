@@ -1,15 +1,20 @@
 @import /src/assets/sass/resets
+@import /src/assets/sass/variables
 @import /src/assets/sass/configs
 
+// Global Rules
 html 
   scroll-behavior: smooth
 
 #root
   min-height: 100%
   font-family: 'Poppins', Arial, sans-serif
-  background: $c-bg-primary
+  background: $c-dark
   height: 3000px
 
 .container
   @include xl-screens
     width: 1110px !important
+
+section:not(.hero)
+  padding-top: 5rem

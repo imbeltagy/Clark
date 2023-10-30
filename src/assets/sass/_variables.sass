@@ -1,0 +1,23 @@
+// Bootstrap Breakpoints
+@mixin sm-screens
+  @media (min-width: 576px)
+    @content
+@mixin md-screens
+  @media (min-width: 768px)
+    @content
+@mixin lg-screens
+  @media (min-width: 992px)
+    @content
+@mixin xl-screens
+  @media (min-width: 1200px)
+    @content
+@mixin xxl-screens
+  @media (min-width: 1400px)
+    @content
+
+// Common Colors
+$c-primary: #ffbd39
+$c-light: #fff
+$c-dark: #000
+$text-secondary: #999
+$bg-secondary: rgba(255, 255, 255, 0.1)

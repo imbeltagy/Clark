@@ -1,4 +1,4 @@
-@import /src/assets/sass/configs
+@import /src/assets/sass/variables
   
 .hero
   .carousel-item > .container
@@ -13,7 +13,7 @@
       background-position: center center
       background-size: cover
       background-repeat: no-repeat
-      background-color: $c-bg-primary
+      background-color: $c-dark
       @include lg-screens
         width: 85%
       @include xl-screens
@@ -38,17 +38,12 @@
         width: 35rem
 
     .small
-      color: $c-accent
       letter-spacing: .1em
 
     h1
       font-size: 2rem
-      font-weight: 800
       @include md-screens
         font-size: 4rem
-
-      .special
-        color: $c-accent
       
 
     h2
@@ -60,8 +55,8 @@
   .carousel-indicators button
     width: .7rem
     height: .7rem
-    background-color: #fff
-    box-shadow: 0 0 0 .2rem #fff9
+    background-color: $c-light
+    box-shadow: 0 0 0 .2rem $text-secondary
     background-clip: unset
     border: none
     border-radius: 100%
