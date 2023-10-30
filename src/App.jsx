@@ -1,8 +1,8 @@
 import "./app.sass";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Hero from "./components/hero";
-import Header from "./components/header";
-import About from "./components/about";
+import Hero from "./layout/hero";
+import Header from "./layout/header";
+import About from "./layout/about";
 
 function App() {
   return (
