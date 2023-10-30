@@ -36,7 +36,14 @@ const Header = () => {
         <Navbar.Brand href="#home" className="text-light fw-900">
           CLARK
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navigation" />
+        <Navbar.Toggle aria-controls="navigation">
+          <svg viewBox="0 0 40 30" width="20" height="15" className="d-inline-block me-1">
+            <path d="M 1 1 L 39 1" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 1 15 L 39 15" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 1 29 L 39 29" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+          <span className="text-secondary">MENU</span>
+        </Navbar.Toggle>
         <Navbar.Collapse id="navigation">
           <NavLinks />
         </Navbar.Collapse>
