@@ -1,5 +1,15 @@
+@import /src/assets/sass/resets
 @import /src/assets/sass/configs
 
-body
+html 
+  scroll-behavior: smooth
+
+#root
+  min-height: 100%
   font-family: 'Poppins', Arial, sans-serif
   background: $c-bg-primary
+  height: 3000px
+
+.container
+  @include xl-screens
+    width: 1110px !important

@@ -1,10 +1,12 @@
 import "./app.sass";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Hero from "./components/hero";
-import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/header";
 
 function App() {
   return (
     <>
+      <Header />
       <Hero />
     </>
   );
