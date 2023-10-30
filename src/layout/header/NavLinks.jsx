@@ -29,7 +29,7 @@ const NavLinks = () => {
         // If:  Target === null => return
         if (!target) return;
         // Else: If Target is in view => add("active"), Else: remove("active")
-        if (scrollY > target.offsetTop - 100 && scrollY < target.offsetTop - 100 + target.offsetHeight) {
+        if (scrollY >= target.offsetTop - 100 && scrollY < target.offsetTop - 100 + target.offsetHeight) {
           link.classList.add("active");
         } else {
           link.classList.remove("active");
