@@ -1,0 +1,41 @@
+@import /src/assets/sass/variables
+
+$trans: .3s
+
+.services
+  a
+    text-decoration: none !important
+    transition: background-color $trans
+    &:hover
+      background-color: $c-primary !important
+
+    .icon
+      width: 3.5rem
+
+      path
+        fill: $c-primary
+        transition: stroke $trans, fill $trans
+
+    &:hover .icon path
+      fill: $c-light
+
+    .line
+      width: 2rem
+      margin-inline: auto
+
+      path
+        stroke: $c-primary
+        transition: stroke $trans
+
+    &:hover .line path
+      stroke: $c-dark
+
+    h3
+      color: $c-light
+      font-size: .8rem
+      font-weight: 500
+      letter-spacing: .15em
+      transition: color $trans
+
+    &:hover h3
+      color: $c-dark
