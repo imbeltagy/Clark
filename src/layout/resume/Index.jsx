@@ -65,6 +65,7 @@ const Resume = () => {
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
+              key={element.title}
             >
               <div className=" h-100 bg-secondary p-4 rounded">
                 <span className="date text-primary fw-900" style={{ fontSize: "1.6rem" }}>
