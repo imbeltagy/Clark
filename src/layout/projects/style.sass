@@ -1,0 +1,30 @@
+@import /src/assets/sass/variables
+
+.projects .wrapper .project
+  position: relative
+  height: 20rem
+
+  .img
+    position: absolute
+    inset: 0
+    background-position: center center
+    background-size: cover
+
+  .text
+    position: absolute
+    inset: 0
+    background-color: rgba($c-primary, .15)
+    transition: background-color .3s
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    @include md-screens
+      background-color: rgba($c-primary, .8)
+      opacity: 0
+      transition: opacity .3s
+
+    &:hover
+      background-color: rgba($c-primary, .8)
+      opacity: 1
