@@ -1,6 +1,6 @@
 import LinkBtn from "../../common/linkBtn";
-import SectionTitle from "/src/common/sectionTitle/Index";
-import { motion } from "framer-motion";
+import SectionTitle from "/src/common/sectionTitle";
+import MotionDiv from "/src/common/motionDiv";
 
 const Resume = () => {
   const cardsContent = [
@@ -49,7 +49,7 @@ const Resume = () => {
 
   return (
     <section id="resume" className="resume">
-      <div className="container">
+      <MotionDiv className="container">
         {/* Title */}
         <SectionTitle bgText="Resume">
           <SectionTitle.Headding>Resume</SectionTitle.Headding>
@@ -62,11 +62,7 @@ const Resume = () => {
         {/* Content */}
         <div className="cards row row-cols-md-2 g-4">
           {cardsContent.map((element) => (
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
-              key={element.title}
-            >
+            <MotionDiv key={element.title}>
               <div className=" h-100 bg-secondary p-4 rounded">
                 <span className="date text-primary fw-900" style={{ fontSize: "1.6rem" }}>
                   {element.date}
@@ -79,15 +75,15 @@ const Resume = () => {
                 </span>
                 <p className="text-secondary my-4">{element.brief}</p>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
 
         {/* Button */}
-        <div className="mt-5 pt-5">
+        <MotionDiv className="mt-5 pt-5">
           <LinkBtn className="mx-auto fw-600 py-4 px-5">Download CV</LinkBtn>
-        </div>
-      </div>
+        </MotionDiv>
+      </MotionDiv>
     </section>
   );
 };

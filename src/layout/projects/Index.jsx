@@ -1,5 +1,6 @@
 import "./style.sass";
 import SectionTitle from "/src/common/sectionTitle";
+import MotionDiv from "/src/common/motionDiv";
 
 const Projects = () => {
   const images = [
@@ -26,7 +27,7 @@ const Projects = () => {
         <div className="row g-4">
           {images.map((element) => (
             <div className={`wrapper col-md-${element.cols}`} key={element.src}>
-              <div className="project">
+              <MotionDiv className="project">
                 <div className="img" style={{ backgroundImage: `url('${element.src}')` }}></div>
                 <div className="text">
                   <a
@@ -40,7 +41,7 @@ const Projects = () => {
                     WEB DESIGN
                   </h4>
                 </div>
-              </div>
+              </MotionDiv>
             </div>
           ))}
         </div>

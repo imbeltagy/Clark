@@ -1,20 +1,15 @@
 import "./style.sass";
-import { motion } from "framer-motion";
-import LinkBtn from "../../common/linkBtn";
+import LinkBtn from "/src/common/linkBtn";
 import Info from "./components/Info";
 import ProjectsCount from "./components/ProjectsCount";
 import Title from "./components/Title";
+import MotionDiv, { MotionChild } from "/src/common/motionDiv";
 
 const About = () => {
-  const variants = {
-    hidden: { y: 100, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5, staggerChildren: 0.2 } },
-  };
-
   return (
     <section id="about" className="about">
-      <motion.div className="container" initial="hidden" whileInView="visible" variants={variants}>
-        <motion.div className="row g-3" variants={variants}>
+      <MotionDiv className="container">
+        <MotionChild className="row g-3">
           {/* Image */}
           <div className="img-container col-md-6 col-lg-5">
             <div
@@ -24,19 +19,19 @@ const About = () => {
           </div>
 
           {/* Text */}
-          <motion.div className="text col-md-6 col-lg-7 pb-md-3" variants={variants}>
+          <div className="text col-md-6 col-lg-7 pb-md-3">
             <Title />
 
-            <Info variants={variants} />
+            <Info />
 
-            <ProjectsCount variants={variants} />
+            <ProjectsCount />
 
-            <motion.div className="pb-md-5" variants={variants}>
+            <MotionChild className="pb-md-5">
               <LinkBtn className="fw-600">Download CV</LinkBtn>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </motion.div>
+            </MotionChild>
+          </div>
+        </MotionChild>
+      </MotionDiv>
     </section>
   );
 };

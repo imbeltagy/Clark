@@ -1,4 +1,5 @@
 import SectionTitle from "/src/common/SectionTitle";
+import MotionDiv, { MotionChild } from "/src/common/motionDiv";
 
 const Skills = () => {
   const progresses = [
@@ -12,7 +13,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills">
-      <div className="container">
+      <MotionDiv className="container">
         {/* Headding */}
         <SectionTitle bgText="Skills">
           <SectionTitle.Headding>My Skills</SectionTitle.Headding>
@@ -22,7 +23,7 @@ const Skills = () => {
         </SectionTitle>
 
         {/* Content */}
-        <div className="row row-cols-md-2">
+        <MotionChild className="row row-cols-md-2">
           {progresses.map((element) => (
             <div className="wrapper mb-4 pb-2" key={element.name}>
               {/* Text */}
@@ -51,8 +52,8 @@ const Skills = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
+        </MotionChild>
+      </MotionDiv>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import "./style.sass";
 import SectionTitle from "/src/common/SectionTitle";
+import MotionDiv, { MotionChild } from "/src/common/motionDiv";
 
 const Services = () => {
   const icons = [
@@ -85,7 +86,7 @@ const Services = () => {
 
   return (
     <section id="services" className="services">
-      <div className="container">
+      <MotionDiv className="container">
         {/* Title */}
         <SectionTitle bgText="Services">
           <SectionTitle.Headding>Services</SectionTitle.Headding>
@@ -97,7 +98,7 @@ const Services = () => {
         {/* Cards */}
         <div className="row row-cols-md-3 gx-3 gy-4">
           {cards.map((card) => (
-            <div key={card.text}>
+            <MotionChild key={card.text}>
               <a className="bg-secondary p-4 d-block text-center" href={card.herf} draggable="false">
                 <svg className="icon d-block mx-auto mt-2 mb-3" width="60" height="60" viewBox={card.icon.viewBox}>
                   {card.icon.innerSvg}
@@ -107,10 +108,10 @@ const Services = () => {
                   <path d="M 0.5 0.5 L 29.5 0.5" stroke="1" strokeLinecap="round" />
                 </svg>
               </a>
-            </div>
+            </MotionChild>
           ))}
         </div>
-      </div>
+      </MotionDiv>
     </section>
   );
 };

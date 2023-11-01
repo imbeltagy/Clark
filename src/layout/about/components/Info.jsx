@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { MotionChild } from "/src/common/motionDiv/Index";
 
-const Info = ({ variants }) => {
+const Info = () => {
   const info = [
     { name: "Name", content: "Clark Thompson" },
     { name: "Date of birth", content: "January 01, 1987" },
@@ -13,10 +13,10 @@ const Info = ({ variants }) => {
   return (
     <div className="info mb-5 ps-2">
       {info.map((element) => (
-        <motion.div className="row mb-3" variants={variants} key={element.name}>
+        <MotionChild className="row mb-3" key={element.name}>
           <span className="col-3 text-white fw-600">{element.name}:</span>
           <span className="col-9 text-secondary">{element.content}</span>
-        </motion.div>
+        </MotionChild>
       ))}
     </div>
   );

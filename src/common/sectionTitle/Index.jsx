@@ -1,10 +1,14 @@
 import "./style.sass";
+import { MotionChild } from "/src/common/motionDiv";
 
 const SectionTitle = ({ children, alignLeft, bgText }) => {
   return (
-    <div className={`section-title mb-5 text-light ${alignLeft ? "text-start" : "text-center"}`} data-bg-text={bgText}>
+    <MotionChild
+      className={`section-title mb-5 text-light ${alignLeft ? "text-start" : "text-center"}`}
+      data-bg-text={bgText}
+    >
       {children}
-    </div>
+    </MotionChild>
   );
 };
 
@@ -15,6 +19,7 @@ SectionTitle.Headding = ({ children }) => {
     </>
   );
 };
+
 SectionTitle.Brief = ({ children }) => {
   return <p className="text-secondary">{children}</p>;
 };

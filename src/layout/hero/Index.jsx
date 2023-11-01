@@ -1,6 +1,6 @@
 import "./style.sass";
 import Carousel from "react-bootstrap/Carousel";
-import LinkBtn from "../../common/linkBtn";
+import LinkBtn from "/src/common/linkBtn";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -45,7 +45,8 @@ const Hero = () => {
               <Carousel.Caption>
                 <motion.div
                   initial={{ y: 100, opacity: 0 }}
-                  animate={{ y: 0, opacity: i === index ? 1 : 0, transition: { duration: 0.7 } }}
+                  viewport={{ once: true }}
+                  whileInView={{ y: 0, opacity: i === index ? 1 : 0, transition: { duration: 0.7 } }}
                   className="container"
                 >
                   <span className="small text-primary">HELLO!</span>
