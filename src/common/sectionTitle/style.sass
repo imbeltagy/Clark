@@ -10,6 +10,9 @@
     @include xl-screens
       margin-bottom: 2rem
 
+  h2,p
+    position: relative // To be over ::before
+
   &::before
     content: attr(data-bg-text)
     font-size: 3.3rem
