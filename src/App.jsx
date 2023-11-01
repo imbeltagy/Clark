@@ -5,6 +5,7 @@ import Header from "./layout/header";
 import About from "./layout/about";
 import Resume from "./layout/resume";
 import Services from "./layout/services";
+import Skills from "./layout/skills";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Resume />
       <Services />
+      <Skills />
     </>
   );
 }
