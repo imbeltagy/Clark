@@ -1,6 +1,5 @@
 import SectionTitle from "/src/common/sectionTitle";
 import MotionDiv, { MotionChild } from "/src/common/MotionDiv";
-import "./style.sass";
 
 const Blog = () => {
   const images = [
@@ -47,7 +46,7 @@ const Blog = () => {
               </p>
               {/* Title */}
               <a
-                className="title text-light fw-600 text-decoration-none"
+                className="title text-light text_hover-primary fw-600 text-decoration-none"
                 href="#"
                 style={{ fontSize: "1.3rem", lineHeight: 1.3 }}
               >

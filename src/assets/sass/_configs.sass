@@ -9,12 +9,17 @@ $colors: ("primary": $c-primary, "light": $c-light, "dark": $c-dark)
 
   .text-#{$name}.text-#{$name}
     color: $value !important
+    transition: color .3s
 
 .bg-secondary.bg-secondary
   background-color: $bg-secondary !important
 
 .text-secondary.text-secondary
   color: $text-secondary !important
+  transition: color .3s
+
+.text_hover-primary:hover
+  color: $c-primary !important
 
 // Font Weights
 @for $i from 1 through 9
