@@ -51,7 +51,7 @@ const Hero = () => {
                   <span className="small text-primary">HELLO!</span>
                   <h1 className="my-2 mb-3 fw-800">{slide.headding}</h1>
                   {slide.subHeadding && <h2 className="mb-4">{slide.subHeadding}</h2>}
-                  <div className="btns">
+                  <div className="btns d-flex justify-content-center justify-content-lg-start">
                     <LinkBtn className="me-1">hire me</LinkBtn>
                     <LinkBtn outline>my works</LinkBtn>
                   </div>
