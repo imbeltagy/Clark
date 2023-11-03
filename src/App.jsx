@@ -8,6 +8,7 @@ import Services from "./layout/services";
 import Skills from "./layout/skills";
 import Projects from "./layout/projects";
 import Blog from "./layout/blog";
+import Achievement from "./layout/achievement";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Skills />
       <Projects />
       <Blog />
+      <Achievement />
     </>
   );
 }
