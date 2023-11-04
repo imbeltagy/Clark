@@ -12,8 +12,8 @@ const ProjectsCount = () => {
   }, [projectsCount]);
 
   return (
-    <p className="fw-600 mb-4" style={{ fontSize: "1.3rem", letterSpacing: ".07em" }}>
-      <MotionSpan className="text-primary d-inline-block me-2">{projectsCount}</MotionSpan>
+    <p className="mb-4" style={{ fontSize: "1.3rem" }}>
+      <MotionSpan className="text-primary d-inline-block me-2 fw-600">{projectsCount}</MotionSpan>
       <MotionSpan className="text-light d-inline-block">Projects complete</MotionSpan>
     </p>
   );

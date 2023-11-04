@@ -49,7 +49,7 @@ const Blog = () => {
               </p>
               {/* Title */}
               <a
-                className="title text-light text_hover-primary fw-600 text-decoration-none"
+                className="title text-light text_hover-primary fw-500 text-decoration-none"
                 href="#"
                 style={{ fontSize: "1.3rem", lineHeight: 1.3 }}
               >

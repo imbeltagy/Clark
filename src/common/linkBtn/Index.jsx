@@ -4,7 +4,9 @@ const LinkBtn = ({ children, outline, className }) => {
   return (
     <a
       href="#"
-      className={`btn btn${outline ? "-outline" : ""}-primary rounded-pill py-3 px-4 text-uppercase ${className}`}
+      className={`btn btn${
+        outline ? "-outline" : ""
+      }-primary rounded-pill py-3 px-4 text-uppercase fw-500 ${className}`}
     >
       {children}
     </a>

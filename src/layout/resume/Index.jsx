@@ -81,7 +81,7 @@ const Resume = () => {
 
         {/* Button */}
         <MotionDiv className="mt-5 pt-5">
-          <LinkBtn className="mx-auto fw-600 py-4 px-5">Download CV</LinkBtn>
+          <LinkBtn className="mx-auto py-4 px-5">Download CV</LinkBtn>
         </MotionDiv>
       </MotionDiv>
     </section>

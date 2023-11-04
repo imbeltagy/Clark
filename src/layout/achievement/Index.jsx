@@ -46,7 +46,7 @@ const Achievements = () => {
             <p className="text-secondary my-3">
               A small river named Duden flows by their place and supplies it with the necessary regelialia.
             </p>
-            <LinkBtn className="mx-auto fw-600 px-5" style={{ fontSize: ".75rem" }}>
+            <LinkBtn className="mx-auto px-5" style={{ fontSize: ".75rem" }}>
               Hire Me
             </LinkBtn>
           </MotionDiv>

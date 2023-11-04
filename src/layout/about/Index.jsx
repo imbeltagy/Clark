@@ -27,7 +27,7 @@ const About = () => {
             <ProjectsCount />
 
             <MotionChild className="pb-md-5">
-              <LinkBtn className="fw-600">Download CV</LinkBtn>
+              <LinkBtn>Download CV</LinkBtn>
             </MotionChild>
           </div>
         </MotionChild>

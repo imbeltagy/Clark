@@ -29,7 +29,7 @@ const Skills = () => {
               {/* Text */}
               <div className="text text-light mb-2 d-flex justify-content-between align-items-center">
                 {/* Title */}
-                <h3 className="fw-600" style={{ fontSize: "1.25rem" }}>
+                <h3 className="fw-500" style={{ fontSize: "1.25rem" }}>
                   {element.name}
                 </h3>
 
