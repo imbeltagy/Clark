@@ -11,6 +11,9 @@ $colors: ("primary": $c-primary, "light": $c-light, "dark": $c-dark)
     color: $value !important
     transition: color .3s
 
+  .text_hover-#{$name}.text_hover-#{$name}:hover
+    color: $value !important
+
   .fill-#{$name}
     fill: $value
 
@@ -26,6 +29,9 @@ $colors: ("primary": $c-primary, "light": $c-light, "dark": $c-dark)
 
 .text_hover-primary:hover
   color: $c-primary !important
+
+.fill-secondary
+  fill: $text-secondary
 
 // Font Weights
 @for $i from 1 through 9

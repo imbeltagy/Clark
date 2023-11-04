@@ -10,6 +10,7 @@ import Projects from "./layout/projects";
 import Blog from "./layout/blog";
 import Achievement from "./layout/achievement";
 import Contact from "./layout/contact";
+import Footer from "./layout/footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Blog />
       <Achievement />
       <Contact />
+      <Footer />
     </>
   );
 }
