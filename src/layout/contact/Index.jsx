@@ -5,22 +5,22 @@ import { MotionParent, MotionChild } from "/src/common/motionDiv/Index";
 const Contact = () => {
   const contactInfo = [
     {
-      icon: "/src/assets/images/contact/icon_4.svg",
+      icon: "/contact/icon_4.svg",
       title: "ADDRESS",
       details: { text: "198 West 21th Street, Suite 721 New York NY 10016", type: "text" },
     },
     {
-      icon: "/src/assets/images/contact/icon_3.svg",
+      icon: "/contact/icon_3.svg",
       title: "CONTACT NUMBER",
       details: { text: "+ 1235 2355 98", type: "link", href: "#" },
     },
     {
-      icon: "/src/assets/images/contact/icon_2.svg",
+      icon: "/contact/icon_2.svg",
       title: "EMAIL ADDRESS",
       details: { text: "info@yoursite.com", type: "link", href: "#" },
     },
     {
-      icon: "/src/assets/images/contact/icon_1.svg",
+      icon: "/contact/icon_1.svg",
       title: "WEBSITE",
       details: { text: "yoursite.com", type: "link", href: "#" },
     },
@@ -74,7 +74,7 @@ const Contact = () => {
           </form>
           <div
             className="img"
-            style={{ background: "center / cover url('/src/assets/images/contact/form.jpg')", minHeight: "30rem" }}
+            style={{ background: "center / cover url('/contact/form.jpg')", minHeight: "30rem" }}
           ></div>
         </MotionParent>
       </div>

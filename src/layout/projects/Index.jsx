@@ -4,12 +4,12 @@ import { MotionParent } from "/src/common/motionDiv/Index";
 
 const Projects = () => {
   const images = [
-    { src: "/src/assets/images/projects/project-4.jpg", cols: 4 },
-    { src: "/src/assets/images/projects/project-5.jpg", cols: 8 },
-    { src: "/src/assets/images/projects/project-1.jpg", cols: 8 },
-    { src: "/src/assets/images/projects/project-2.jpg", cols: 4 },
-    { src: "/src/assets/images/projects/project-6.jpg", cols: 8 },
-    { src: "/src/assets/images/projects/project-3.jpg", cols: 4 },
+    { src: "/projects/project-4.jpg", cols: 4 },
+    { src: "/projects/project-5.jpg", cols: 8 },
+    { src: "/projects/project-1.jpg", cols: 8 },
+    { src: "/projects/project-2.jpg", cols: 4 },
+    { src: "/projects/project-6.jpg", cols: 8 },
+    { src: "/projects/project-3.jpg", cols: 4 },
   ];
 
   return (

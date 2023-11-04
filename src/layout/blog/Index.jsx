@@ -2,11 +2,7 @@ import SectionTitle from "/src/common/sectionTitle/Index";
 import { MotionParent, MotionChild } from "/src/common/MotionDiv/Index";
 
 const Blog = () => {
-  const images = [
-    "/src/assets/images/blog/image_1.jpg",
-    "/src/assets/images/blog/image_2.jpg",
-    "/src/assets/images/blog/image_3.jpg",
-  ];
+  const images = ["/blog/image_1.jpg", "/blog/image_2.jpg", "/blog/image_3.jpg"];
 
   return (
     <section id="blog" className="blog">

@@ -7,7 +7,7 @@ import { useState } from "react";
 const Hero = () => {
   const slides = [
     {
-      img: "/src/assets/images/hero/bg_1.png",
+      img: "/hero/bg_1.png",
       headding: (
         <>
           I'm <span className="text-primary">Clark Thompson</span>
@@ -16,7 +16,7 @@ const Hero = () => {
       subHeadding: "A Freelance Web Designer",
     },
     {
-      img: "/src/assets/images/hero/bg_2.png",
+      img: "/hero/bg_2.png",
       headding: (
         <>
           I'm a <span className="text-primary">web designer</span> based in London
