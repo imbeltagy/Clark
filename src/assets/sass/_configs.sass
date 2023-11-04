@@ -31,3 +31,10 @@ $colors: ("primary": $c-primary, "light": $c-light, "dark": $c-dark)
 @for $i from 1 through 9
   .fw-#{$i}00
     font-weight: $i * 100 !important
+
+// Sizing
+.w-fit.w-fit
+  width: fit-content !important
+.w-md-fit.w-md-fit
+  @include md-screens
+    width: fit-content !important

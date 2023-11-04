@@ -58,7 +58,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className="row g-0 row-cols-md-2 flex-md-row-reverse mt-5 pt-5">
-          <form className="p-5 d-flex flex-column gap-3" style={{ backgroundColor: "#f8f9fa" }}>
+          <form className="p-3 p-md-5 d-flex flex-column gap-3" style={{ backgroundColor: "#f8f9fa" }}>
             <input type="text" className="form-control p-3" placeholder="Your Name" />
             <input type="email" className="form-control p-3" placeholder="Your Email" />
             <input type="text" className="form-control p-3" placeholder="Subject" />
@@ -69,7 +69,7 @@ const Contact = () => {
               cols="30"
               rows="7"
             ></textarea>
-            <LinkBtn className="px-5 fw-500">Send Message</LinkBtn>
+            <LinkBtn className="px-5 fw-500 w-100 w-md-fit">Send Message</LinkBtn>
           </form>
           <div
             className="img"
