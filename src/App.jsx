@@ -9,6 +9,7 @@ import Skills from "./layout/skills";
 import Projects from "./layout/projects";
 import Blog from "./layout/blog";
 import Achievement from "./layout/achievement";
+import Contact from "./layout/contact";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Projects />
       <Blog />
       <Achievement />
+      <Contact />
     </>
   );
 }
