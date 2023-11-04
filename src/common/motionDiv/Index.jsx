@@ -5,9 +5,16 @@ const variants = {
   visible: { y: 0, opacity: 1, transition: { duration: 0.5, staggerChildren: 0.2 } },
 };
 
-const MotionDiv = ({ children, ...props }) => {
+const parentProps = {
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true },
+  variants: variants,
+};
+
+export const MotionParent = ({ children, ...props }) => {
   return (
-    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={variants} {...props}>
+    <motion.div {...parentProps} {...props}>
       {children}
     </motion.div>
   );
@@ -21,14 +28,21 @@ export const MotionChild = ({ children, ...props }) => {
   );
 };
 
-MotionChild.span = ({ children, ...props }) => {
+MotionChild.h1 = ({ children, ...props }) => {
   return (
-    <motion.span {...props} variants={variants}>
+    <motion.h1 {...props} variants={variants}>
       {children}
-    </motion.span>
+    </motion.h1>
   );
 };
 MotionChild.h2 = ({ children, ...props }) => {
+  return (
+    <motion.h2 {...props} variants={variants}>
+      {children}
+    </motion.h2>
+  );
+};
+MotionChild.h3 = ({ children, ...props }) => {
   return (
     <motion.h2 {...props} variants={variants}>
       {children}
@@ -40,6 +54,13 @@ MotionChild.p = ({ children, ...props }) => {
     <motion.p {...props} variants={variants}>
       {children}
     </motion.p>
+  );
+};
+MotionChild.span = ({ children, ...props }) => {
+  return (
+    <motion.span {...props} variants={variants}>
+      {children}
+    </motion.span>
   );
 };
 MotionChild.a = ({ children, ...props }) => {
@@ -70,13 +91,3 @@ MotionChild.textarea = ({ children, ...props }) => {
     </motion.textarea>
   );
 };
-
-export const MotionSpan = ({ children, ...props }) => {
-  return (
-    <motion.span {...props} variants={variants}>
-      {children}
-    </motion.span>
-  );
-};
-
-export default MotionDiv;

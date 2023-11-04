@@ -1,6 +1,6 @@
 import LinkBtn from "../../common/linkBtn";
 import SectionTitle from "/src/common/sectionTitle";
-import MotionDiv from "/src/common/motionDiv";
+import { MotionParent, MotionChild } from "/src/common/motionDiv";
 
 const Resume = () => {
   const cardsContent = [
@@ -49,7 +49,7 @@ const Resume = () => {
 
   return (
     <section id="resume" className="resume">
-      <MotionDiv className="container">
+      <MotionParent className="container">
         {/* Title */}
         <SectionTitle bgText="Resume">
           <SectionTitle.Headding>Resume</SectionTitle.Headding>
@@ -62,28 +62,31 @@ const Resume = () => {
         {/* Content */}
         <div className="cards row row-cols-md-2 g-4">
           {cardsContent.map((element) => (
-            <MotionDiv key={element.title}>
+            <MotionParent key={element.title}>
               <div className=" h-100 bg-secondary p-4 rounded">
-                <span className="date text-primary fw-900" style={{ fontSize: "1.6rem" }}>
+                <MotionChild.span className="date text-primary fw-900" style={{ fontSize: "1.6rem" }}>
                   {element.date}
-                </span>
-                <h3 className="text-light my-2" style={{ fontSize: "1.6rem" }}>
+                </MotionChild.span>
+                <MotionChild.h3 className="text-light my-2" style={{ fontSize: "1.6rem" }}>
                   {element.title}
-                </h3>
-                <span className="provider text-secondary fw-600" style={{ fontSize: ".75rem", letterSpacing: ".25em" }}>
+                </MotionChild.h3>
+                <MotionChild.span
+                  className="provider text-secondary fw-600"
+                  style={{ fontSize: ".75rem", letterSpacing: ".25em" }}
+                >
                   {element.from}
-                </span>
-                <p className="text-secondary my-4">{element.brief}</p>
+                </MotionChild.span>
+                <MotionChild.p className="text-secondary my-4">{element.brief}</MotionChild.p>
               </div>
-            </MotionDiv>
+            </MotionParent>
           ))}
         </div>
 
         {/* Button */}
-        <MotionDiv className="mt-5 pt-5">
+        <MotionParent className="mt-5 pt-5">
           <LinkBtn className="mx-auto py-4 px-5">Download CV</LinkBtn>
-        </MotionDiv>
-      </MotionDiv>
+        </MotionParent>
+      </MotionParent>
     </section>
   );
 };

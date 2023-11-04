@@ -3,13 +3,13 @@ import LinkBtn from "/src/common/linkBtn";
 import Info from "./components/Info";
 import ProjectsCount from "./components/ProjectsCount";
 import Title from "./components/Title";
-import MotionDiv, { MotionChild } from "/src/common/motionDiv";
+import { MotionParent } from "/src/common/motionDiv";
 
 const About = () => {
   return (
     <section id="about" className="about">
-      <MotionDiv className="container">
-        <MotionChild className="row g-3">
+      <div className="container">
+        <MotionParent className="row g-3">
           {/* Image */}
           <div className="img-container col-md-6 col-lg-5">
             <div
@@ -26,12 +26,10 @@ const About = () => {
 
             <ProjectsCount />
 
-            <MotionChild className="pb-md-5">
-              <LinkBtn>Download CV</LinkBtn>
-            </MotionChild>
+            <LinkBtn>Download CV</LinkBtn>
           </div>
-        </MotionChild>
-      </MotionDiv>
+        </MotionParent>
+      </div>
     </section>
   );
 };

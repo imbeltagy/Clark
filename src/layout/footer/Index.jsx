@@ -1,4 +1,4 @@
-import MotionDiv, { MotionChild } from "/src/common/motionDiv";
+import { MotionParent, MotionChild } from "/src/common/motionDiv";
 
 const Footer = () => {
   const icons = {
@@ -86,7 +86,7 @@ const Footer = () => {
       <div className="container">
         <div className="row row-cols-md-4">
           {/* First Col */}
-          <MotionDiv className="mb-4">
+          <MotionParent className="mb-4">
             <MotionChild.h2 className="fs-4 fw-500 text-light mb-4 pb-3">About</MotionChild.h2>
             <MotionChild.p className="text-secondary">
               Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
@@ -101,11 +101,11 @@ const Footer = () => {
                 </MotionChild.a>
               ))}
             </div>
-          </MotionDiv>
+          </MotionParent>
 
           {/* Other Cols */}
           {lists.map(({ title, items }) => (
-            <MotionDiv className="mb-4" key={title}>
+            <MotionParent className="mb-4" key={title}>
               <MotionChild.h2 className="fs-4 fw-500 text-light mb-md-4 pb-3">{title}</MotionChild.h2>
               <ul className="ps-0">
                 {items.map(({ icon, text, href }) => (
@@ -127,13 +127,13 @@ const Footer = () => {
                   </MotionChild.li>
                 ))}
               </ul>
-            </MotionDiv>
+            </MotionParent>
           ))}
         </div>
       </div>
 
       {/* Copyright */}
-      <MotionDiv className="container my-5 pb-5">
+      <MotionParent className="container my-5 pb-5">
         <p className="text-center fw-500" style={{ color: "#999" }}>
           Copyright ©2023 All rights reserved | This template is made with Beltagy by
           <a
@@ -144,7 +144,7 @@ const Footer = () => {
             Colorlib
           </a>
         </p>
-      </MotionDiv>
+      </MotionParent>
     </footer>
   );
 };

@@ -1,5 +1,5 @@
 import SectionTitle from "/src/common/sectionTitle";
-import MotionDiv, { MotionChild } from "/src/common/MotionDiv";
+import { MotionParent, MotionChild } from "/src/common/MotionDiv";
 
 const Blog = () => {
   const images = [
@@ -10,7 +10,7 @@ const Blog = () => {
 
   return (
     <section id="blog" className="blog">
-      <MotionDiv className="container">
+      <MotionParent className="container">
         {/* Title */}
         <SectionTitle bgText="Blog">
           <SectionTitle.Headding>Our Blog</SectionTitle.Headding>
@@ -62,7 +62,7 @@ const Blog = () => {
             </MotionChild>
           ))}
         </div>
-      </MotionDiv>
+      </MotionParent>
     </section>
   );
 };

@@ -1,6 +1,6 @@
 import "./style.sass";
 import SectionTitle from "/src/common/SectionTitle";
-import MotionDiv, { MotionChild } from "/src/common/motionDiv";
+import { MotionParent, MotionChild } from "/src/common/motionDiv";
 
 const Services = () => {
   const icons = [
@@ -86,7 +86,7 @@ const Services = () => {
 
   return (
     <section id="services" className="services">
-      <MotionDiv className="container">
+      <MotionParent className="container">
         {/* Title */}
         <SectionTitle bgText="Services">
           <SectionTitle.Headding>Services</SectionTitle.Headding>
@@ -111,7 +111,7 @@ const Services = () => {
             </MotionChild>
           ))}
         </div>
-      </MotionDiv>
+      </MotionParent>
     </section>
   );
 };

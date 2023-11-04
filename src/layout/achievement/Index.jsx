@@ -1,6 +1,6 @@
 import "./style.sass";
 import LinkBtn from "/src/common/linkBtn";
-import MotionDiv, { MotionChild } from "/src/common/motionDiv";
+import { MotionParent, MotionChild } from "/src/common/motionDiv";
 
 const Achievements = () => {
   const achievements = {
@@ -13,7 +13,7 @@ const Achievements = () => {
   return (
     <div className="achievements">
       {/* Cards */}
-      <MotionDiv className="cards-container container">
+      <MotionParent className="cards-container container">
         <div className="row row-cols-md-4 g-3">
           {Object.keys(achievements).map((name) => {
             return (
@@ -28,7 +28,7 @@ const Achievements = () => {
             );
           })}
         </div>
-      </MotionDiv>
+      </MotionParent>
       {/* Hire Me */}
       <div
         className="hire-section my-4 mt-md-0"
@@ -39,7 +39,7 @@ const Achievements = () => {
         }}
       >
         <div className="wrapper py-5">
-          <MotionDiv className="container text-center py-5 my-4">
+          <MotionParent className="container text-center py-5 my-4">
             <h2 className="text-light fw-900" style={{ fontSize: "2.7rem" }}>
               I'm <span className="text-primary">Available</span> for freelancing
             </h2>
@@ -49,7 +49,7 @@ const Achievements = () => {
             <LinkBtn className="mx-auto px-5" style={{ fontSize: ".75rem" }}>
               Hire Me
             </LinkBtn>
-          </MotionDiv>
+          </MotionParent>
         </div>
       </div>
     </div>
