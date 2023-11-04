@@ -21,6 +21,13 @@ export const MotionChild = ({ children, ...props }) => {
   );
 };
 
+MotionChild.span = ({ children, ...props }) => {
+  return (
+    <motion.span {...props} variants={variants}>
+      {children}
+    </motion.span>
+  );
+};
 MotionChild.h2 = ({ children, ...props }) => {
   return (
     <motion.h2 {...props} variants={variants}>
@@ -47,6 +54,20 @@ MotionChild.li = ({ children, ...props }) => {
     <motion.li {...props} variants={variants}>
       {children}
     </motion.li>
+  );
+};
+MotionChild.input = ({ children, ...props }) => {
+  return (
+    <motion.input {...props} variants={variants}>
+      {children}
+    </motion.input>
+  );
+};
+MotionChild.textarea = ({ children, ...props }) => {
+  return (
+    <motion.textarea {...props} variants={variants}>
+      {children}
+    </motion.textarea>
   );
 };
 
