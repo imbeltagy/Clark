@@ -1,6 +1,6 @@
-import LinkBtn from "../../common/linkBtn";
-import SectionTitle from "/src/common/sectionTitle";
-import { MotionParent, MotionChild } from "/src/common/motionDiv";
+import LinkBtn from "/src/common/linkBtn/Index";
+import SectionTitle from "/src/common/sectionTitle/Index";
+import { MotionParent, MotionChild } from "/src/common/motionDiv/Index";
 
 const Resume = () => {
   const cardsContent = [

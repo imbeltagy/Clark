@@ -1,6 +1,6 @@
 import "./style.sass";
 import Carousel from "react-bootstrap/Carousel";
-import LinkBtn from "/src/common/linkBtn";
+import LinkBtn from "/src/common/linkBtn/Index";
 import { motion } from "framer-motion";
 import { useState } from "react";
 

@@ -1,6 +1,6 @@
 import "./style.sass";
-import SectionTitle from "/src/common/SectionTitle";
-import { MotionParent, MotionChild } from "/src/common/motionDiv";
+import SectionTitle from "/src/common/SectionTitle/Index";
+import { MotionParent, MotionChild } from "/src/common/motionDiv/Index";
 
 const Services = () => {
   const icons = [

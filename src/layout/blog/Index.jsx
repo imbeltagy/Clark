@@ -1,5 +1,5 @@
-import SectionTitle from "/src/common/sectionTitle";
-import { MotionParent, MotionChild } from "/src/common/MotionDiv";
+import SectionTitle from "/src/common/sectionTitle/Index";
+import { MotionParent, MotionChild } from "/src/common/MotionDiv/Index";
 
 const Blog = () => {
   const images = [

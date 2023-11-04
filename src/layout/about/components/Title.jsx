@@ -1,4 +1,4 @@
-import SectionTitle from "/src/common/sectionTitle";
+import SectionTitle from "/src/common/sectionTitle/Index";
 
 const Title = () => {
   return (

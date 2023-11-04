@@ -1,5 +1,5 @@
 import "./style.sass";
-import { MotionParent, MotionChild } from "/src/common/motionDiv";
+import { MotionParent, MotionChild } from "/src/common/motionDiv/Index";
 
 const SectionTitle = ({ children, alignLeft, bgText }) => {
   return (

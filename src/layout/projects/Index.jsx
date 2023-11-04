@@ -1,6 +1,6 @@
 import "./style.sass";
-import SectionTitle from "/src/common/sectionTitle";
-import { MotionParent } from "/src/common/motionDiv";
+import SectionTitle from "/src/common/sectionTitle/Index";
+import { MotionParent } from "/src/common/motionDiv/Index";
 
 const Projects = () => {
   const images = [

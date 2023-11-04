@@ -1,16 +1,16 @@
 import "./app.sass";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Hero from "./layout/hero";
-import Header from "./layout/header";
-import About from "./layout/about";
-import Resume from "./layout/resume";
-import Services from "./layout/services";
-import Skills from "./layout/skills";
-import Projects from "./layout/projects";
-import Blog from "./layout/blog";
-import Achievement from "./layout/achievement";
-import Contact from "./layout/contact";
-import Footer from "./layout/footer";
+import Hero from "./layout/hero/Index";
+import Header from "./layout/header/Index";
+import About from "./layout/about/Index";
+import Resume from "./layout/resume/Index";
+import Services from "./layout/services/Index";
+import Skills from "./layout/skills/Index";
+import Projects from "./layout/projects/Index";
+import Blog from "./layout/blog/Index";
+import Achievement from "./layout/achievement/Index";
+import Contact from "./layout/contact/Index";
+import Footer from "./layout/footer/Index";
 
 function App() {
   return (

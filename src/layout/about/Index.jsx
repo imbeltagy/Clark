@@ -1,9 +1,9 @@
 import "./style.sass";
-import LinkBtn from "/src/common/linkBtn";
+import LinkBtn from "/src/common/linkBtn/Index";
 import Info from "./components/Info";
 import ProjectsCount from "./components/ProjectsCount";
 import Title from "./components/Title";
-import { MotionParent } from "/src/common/motionDiv";
+import { MotionParent } from "/src/common/motionDiv/Index";
 
 const About = () => {
   return (

@@ -1,4 +1,4 @@
-import { MotionParent, MotionChild } from "/src/common/motionDiv";
+import { MotionParent, MotionChild } from "/src/common/motionDiv/Index";
 
 const Footer = () => {
   const icons = {

@@ -1,6 +1,6 @@
 import "./style.sass";
-import LinkBtn from "/src/common/linkBtn";
-import { MotionParent, MotionChild } from "/src/common/motionDiv";
+import LinkBtn from "/src/common/linkBtn/Index";
+import { MotionParent, MotionChild } from "/src/common/motionDiv/Index";
 
 const Achievements = () => {
   const achievements = {
