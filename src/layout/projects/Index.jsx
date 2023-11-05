@@ -4,12 +4,12 @@ import { MotionParent } from "/src/common/motionDiv/Index";
 
 const Projects = () => {
   const images = [
-    { src: "/projects/project-4.jpg", cols: 4 },
-    { src: "/projects/project-5.jpg", cols: 8 },
-    { src: "/projects/project-1.jpg", cols: 8 },
-    { src: "/projects/project-2.jpg", cols: 4 },
-    { src: "/projects/project-6.jpg", cols: 8 },
-    { src: "/projects/project-3.jpg", cols: 4 },
+    { src: "/projects/project-4.webp", cols: 4 },
+    { src: "/projects/project-5.webp", cols: 8 },
+    { src: "/projects/project-1.webp", cols: 8 },
+    { src: "/projects/project-2.webp", cols: 4 },
+    { src: "/projects/project-6.webp", cols: 8 },
+    { src: "/projects/project-3.webp", cols: 4 },
   ];
 
   return (
@@ -37,9 +37,9 @@ const Projects = () => {
                   >
                     Branding & Illustration Design
                   </a>
-                  <h4 className="text-light" style={{ opacity: 0.8, fontSize: ".85rem", letterSpacing: ".05em" }}>
+                  <h3 className="text-light" style={{ opacity: 0.8, fontSize: ".85rem", letterSpacing: ".05em" }}>
                     WEB DESIGN
-                  </h4>
+                  </h3>
                 </div>
               </MotionParent>
             </div>

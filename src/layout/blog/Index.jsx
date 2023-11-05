@@ -2,7 +2,7 @@ import SectionTitle from "/src/common/sectionTitle/Index";
 import { MotionParent, MotionChild } from "/src/common/MotionDiv/Index";
 
 const Blog = () => {
-  const images = ["/blog/image_1.jpg", "/blog/image_2.jpg", "/blog/image_3.jpg"];
+  const images = ["/blog/image_1.webp", "/blog/image_2.webp", "/blog/image_3.webp"];
 
   return (
     <section id="blog" className="blog">
@@ -22,6 +22,7 @@ const Blog = () => {
               {/* Image */}
               <a
                 href="#"
+                aria-label="Open the project on new window"
                 style={{
                   display: "block",
                   backgroundImage: `url('${element}')`,

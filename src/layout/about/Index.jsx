@@ -12,7 +12,7 @@ const About = () => {
         <MotionParent className="row g-3">
           {/* Image */}
           <div className="img-container col-md-6 col-lg-5">
-            <div className="img" style={{ backgroundImage: "url('/about/image.png')", minHeight: "100%" }}></div>
+            <div className="img" style={{ backgroundImage: "url('/about/image.webp')", minHeight: "100%" }}></div>
           </div>
 
           {/* Text */}

@@ -29,7 +29,7 @@ const Skills = () => {
               {/* Text */}
               <div className="text text-light mb-2 d-flex justify-content-between align-items-center">
                 {/* Title */}
-                <h3 className="fw-500" style={{ fontSize: "1.25rem" }}>
+                <h3 id={`progress-${element.name}`} className="fw-500" style={{ fontSize: "1.25rem" }}>
                   {element.name}
                 </h3>
 
@@ -44,6 +44,7 @@ const Skills = () => {
                 <div
                   class="progress-bar"
                   role="progressbar"
+                  aria-labelledby={`progress-${element.name}`}
                   style={{ width: `${element.progress}%`, backgroundColor: "#ffbd39", borderRadius: ".2em" }}
                   aria-valuenow={element.progress}
                   aria-valuemin="0"

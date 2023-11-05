@@ -41,7 +41,7 @@ const Contact = () => {
           {contactInfo.map(({ icon, title, details }) => (
             <MotionParent className="wrapper text-center" key={title}>
               <MotionChild className="d-inline-block icon p-4 rounded-circle bg-secondary">
-                <img className="m-3" src={icon} width="28" alt={title} />
+                <img className="m-3" src={icon} width="28" height="28" alt={title} />
               </MotionChild>
               <MotionChild.span className="d-block text-light fw-500 mt-4 mb-3" style={{ fontSize: "1.1rem" }}>
                 {title}
@@ -74,7 +74,7 @@ const Contact = () => {
           </form>
           <div
             className="img"
-            style={{ background: "center / cover url('/contact/form.jpg')", minHeight: "30rem" }}
+            style={{ background: "center / cover url('/contact/form.webp')", minHeight: "30rem" }}
           ></div>
         </MotionParent>
       </div>

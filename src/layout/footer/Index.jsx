@@ -93,8 +93,17 @@ const Footer = () => {
               blind texts.
             </MotionChild.p>
             <div className="icons mt-md-5 pt-4">
-              {[icons.twitter, icons.facebook, icons.instagram].map(({ viewBox, innerSvg }, i) => (
-                <MotionChild.a className="d-inline-block p-2 bg-secondary rounded-circle me-3" href="#" key={i}>
+              {[
+                ["Twitter", icons.twitter],
+                ["Facebook", icons.facebook],
+                ["Instagram", icons.instagram],
+              ].map(([linkName, { viewBox, innerSvg }], i) => (
+                <MotionChild.a
+                  className="d-inline-block p-2 bg-secondary rounded-circle me-3"
+                  href="#"
+                  aria-label={`Visit my ${linkName}`}
+                  key={i}
+                >
                   <svg width="25" height="25" className="fill-secondary m-1" viewBox={viewBox}>
                     {innerSvg}
                   </svg>

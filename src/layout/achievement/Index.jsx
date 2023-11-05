@@ -33,7 +33,7 @@ const Achievements = () => {
       <div
         className="hire-section my-4 mt-md-0"
         style={{
-          backgroundImage: "url('/bg_1.jpg')",
+          backgroundImage: "url('/bg_1.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center center",
         }}
