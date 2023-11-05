@@ -1,5 +1,6 @@
 import SectionTitle from "/src/common/SectionTitle/Index";
 import { MotionParent, MotionChild } from "/src/common/motionDiv/Index";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const progresses = [
@@ -24,7 +25,7 @@ const Skills = () => {
 
         {/* Content */}
         <MotionChild className="row row-cols-md-2">
-          {progresses.map((element) => (
+          {progresses.map((element, i) => (
             <div className="wrapper mb-4 pb-2" key={element.name}>
               {/* Text */}
               <div className="text text-light mb-2 d-flex justify-content-between align-items-center">
@@ -41,15 +42,21 @@ const Skills = () => {
 
               {/* Progress Bar */}
               <div class="progress" style={{ backgroundColor: "#1a1a1a", height: ".7rem" }}>
-                <div
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{
+                    width: `${element.progress}%`,
+                    transition: { duration: element.progress / 100, delay: 0.4 },
+                  }}
+                  viewport={{ once: true }}
                   class="progress-bar"
                   role="progressbar"
                   aria-labelledby={`progress-${element.name}`}
-                  style={{ width: `${element.progress}%`, backgroundColor: "#ffbd39", borderRadius: ".2em" }}
+                  style={{ backgroundColor: "#ffbd39", borderRadius: ".2em" }}
                   aria-valuenow={element.progress}
                   aria-valuemin="0"
                   aria-valuemax="100"
-                ></div>
+                ></motion.div>
               </div>
             </div>
           ))}
