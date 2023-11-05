@@ -33,8 +33,24 @@ $colors: ("primary": $c-primary, "light": $c-light, "dark": $c-dark)
 .fill-secondary
   fill: $text-secondary
 
+// Font Family
+
+=font-face($weight, $file-path)
+  @font-face
+    font-family: unquote('Poppins')
+    src: url(unquote($file-path)) format('truetype')
+    font-weight: $weight
+    font-style: normal
+
++font-face(400, '/font/Poppins-Regular.ttf')
++font-face(500, '/font/Poppins-Medium.ttf')
++font-face(600, '/font/Poppins-SemiBold.ttf')
++font-face(700, '/font/Poppins-Bold.ttf')
++font-face(800, '/font/Poppins-ExtraBold.ttf')
++font-face(900, '/font/Poppins-Black.ttf')
+
 // Font Weights
-@for $i from 1 through 9
+@for $i from 5 through 9
   .fw-#{$i}00
     font-weight: $i * 100 !important
 
