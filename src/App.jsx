@@ -1,4 +1,5 @@
 import "./app.sass";
+import "./assets/poppins.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Hero from "./layout/hero/Index";
 import Header from "./layout/header/Index";
